@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Variedades de Hamburguesas - La Parrilla</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        /* Comentario: Estilos CSS internos para esta página, usando la paleta de tu hamburguesería. */
+        body {
+            background-color: #F06811; /* Tu color de fondo naranja para la hamburguesería */
+            font-family: Arial, Helvetica, sans-serif; /* Tu fuente principal */
+            color: #333; /* Color de texto general, puedes ajustarlo si lo quieres más claro */
+            margin: 0;
+            padding: 20px;
+            text-align: center; /* Centra el texto del cuerpo */
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', sans-serif; /* Fuente de los títulos */
+            color: #FFF; /* Blanco para que contraste bien con el fondo naranja */
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3.5em; /* Tamaño grande para el título principal */
+            letter-spacing: 2px;
+            margin-top: 30px;
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente para el contenido */
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 800px; /* Ancho máximo del contenedor de contenido */
+            text-align: left; /* Alinea el texto del contenido a la izquierda dentro del section */
+            color: #333; /* Color de texto oscuro para el contenido, ya que el fondo es claro */
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: justify; /* Justifica el texto de los párrafos */
+        }
+
+        ul {
+            list-style: none; /* Eliminar viñetas por defecto */
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            background-color: rgba(255, 215, 0, 0.1); /* Fondo semi-transparente amarillo/dorado para ítems de lista */
+            margin-bottom: 8px;
+            padding: 10px 15px;
+            border-left: 5px solid #FFD700; /* Borde izquierdo dorado */
+            border-radius: 5px;
+            color: #4A4A4A; /* Texto más oscuro para ítems de lista sobre fondo claro */
+        }
+
+        a {
+            color: greenyellow; /* Tu color de enlaces */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease; /* Transición suave para el hover */
+        }
+
+        a:hover {
+            color: blue; /* Tu color de enlaces al pasar el mouse */
+            text-decoration: underline;
+        }
+
+        /* Estilo para el botón de regreso */
+        .back-button {
+            display: inline-block;
+            background-color: #A0522D; /* Un color marrón que complementa tu naranja */
+            color: white;
+            padding: 10px 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #8B4513; /* Un marrón más oscuro al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Nuestras Increíbles Variedades de Hamburguesas</h1>  
+        
+        <p>
+            En "La Parrilla", cada hamburguesa es una obra de arte. Nos enorgullecemos de ofrecer una selección que satisface todos los gustos, desde los clásicos más queridos hasta creaciones innovadoras con ingredientes únicos y combinaciones sorprendentes. Todas nuestras hamburguesas están preparadas con carne fresca y de la más alta calidad, cocinada a la perfección en nuestra parrilla para ese sabor inconfundible.
+        </p>  
+        
+        <h2>Hamburguesas Clásicas</h2>
+        <p>
+            Perfectas para los amantes de lo tradicional, nuestras hamburguesas clásicas te llevarán de vuelta a los sabores auténticos. Simples, pero irresistibles, con la calidad que nos caracteriza.
+        </p>
+        <ul>
+            <li>**La Clásica:** Carne de res, lechuga, tomate, cebolla, pepinillos y nuestra salsa especial.</li>
+            <li>**Doble Queso:** Dos carnes, doble cheddar, cebolla caramelizada y kétchup.</li>
+        </ul>
+
+        <h2>Hamburguesas Gourmet</h2>
+        <p>
+            Para aquellos que buscan una experiencia culinaria más sofisticada, nuestras opciones gourmet combinan ingredientes selectos y sabores audaces que deleitarán tu paladar.
+        </p>
+        <ul>
+            <li>**La Mediterránea:** Carne de cordero, queso feta, aceitunas kalamata, rúcula y salsa de yogur.</li>
+            <li>**La Ahumada:** Carne de res, queso provolone ahumado, bacon crujiente, aros de cebolla y salsa BBQ artesanal.</li>
+        </ul>
+
+        <h2>Hamburguesas Especiales de Autor</h2>
+        <p>
+            Nuestras hamburguesas de autor son creaciones únicas de nuestros chefs, diseñadas para sorprenderte con combinaciones innovadoras y un toque personal que solo encontrarás en "La Parrilla".
+        </p>
+        <ul>
+            <li>**La Exótica:** Carne de cerdo con salsa teriyaki, piña asada, cebolla morada encurtida y mayonesa de cilantro.</li>
+            <li>**La Fusión:** Carne de res rellena de queso azul, champiñones salteados, espinaca fresca y mayonesa trufada.</li>
+        </ul>
+
+        <h2>Opciones Vegetarianas/Veganas</h2>
+        <p>
+            Sabemos que la variedad es clave, por eso ofrecemos deliciosas alternativas sin carne, llenas de sabor y con ingredientes frescos.
+        </p>
+        <ul>
+            <li>**La Veggie:** Patty de lentejas y champiñones, aguacate, brotes frescos y salsa de pimiento rojo.</li>
+            <li>**La Vegana:** Patty de garbanzos y espinacas, queso vegano, queso vegano, tomate confitado y hummus de remolacha.</li>
+        </ul>
+
+        <a href="../index.html" class="back-button">Volver al Inicio</a>
+        </section>
+</body>
+</html>
