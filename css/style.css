@@ -86,10 +86,10 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: flex; /* Práctico 5: Convierte el <ul> de la navegación en un contenedor flex. */
+    justify-content: center; /* Práctico 5: Centra los ítems de la navegación horizontalmente. */
+    flex-wrap: wrap; /* Práctico 5: Permite que los ítems se envuelvan a la siguiente línea si no caben. */
+    gap: 20px; /* Práctico 5: Añade espacio entre los ítems flex. */
 }
 
 nav ul li {
@@ -132,7 +132,6 @@ main p, main ul li {
     color: #333; /* Asegura que el texto en main sea oscuro para contraste */
 }
 
-
 section {
     margin-bottom: 50px;
     padding-bottom: 25px;
@@ -143,18 +142,26 @@ section:last-child {
     border-bottom: none;
 }
 
+/* === Galería de Imágenes (Aplicación de Flexbox) === */
 .contenedor-imagenes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: flex; /* Práctico 5: Convierte este contenedor en un contenedor flex. Los hijos directos (las imágenes) se convertirán en ítems flex. */
+    flex-wrap: wrap; /* Práctico 5: Permite que los ítems flex (imágenes) se envuelvan a la siguiente línea si no hay suficiente espacio en una sola fila. Esto es crucial para la responsividad de la galería. */
+    justify-content: center; /* Práctico 5: Alinea los ítems flex horizontalmente en el centro del contenedor cuando no llenan una línea completa. */
+    align-items: flex-start; /* Práctico 5: Alinea los ítems flex verticalmente al inicio de la línea. Puedes probar 'stretch', 'center', 'flex-end' si tus imágenes tienen diferentes alturas. */
+    gap: 20px; /* Práctico 5: Crea un espacio uniforme de 20px entre las imágenes, tanto horizontal como verticalmente. */
     margin-top: 30px;
+    padding: 10px; /* Añade un poco de padding al contenedor si es necesario para el diseño */
 }
 
 .contenedor-imagenes img {
-    max-width: 100%;
-    width: 280px;
-    height: auto;
+    /* Práctico 5: Los ítems flex (imágenes) */
+    max-width: 100%; /* Asegura que la imagen no desborde su contenedor flex item */
+    width: 280px; /* Establece un ancho base para las imágenes. Cuando flex-wrap actúa, este ancho es una sugerencia. */
+    height: auto; /* Mantiene la proporción de la imagen */
+    flex-grow: 1; /* Práctico 5: Permite que las imágenes crezcan para ocupar espacio disponible si hay menos ítems en una línea. */
+    flex-shrink: 1; /* Práctico 5: Permite que las imágenes se encojan si no hay suficiente espacio, hasta su contenido mínimo (establecido por el width o max-width). */
+    flex-basis: 280px; /* Práctico 5: Define el tamaño base preferido de un ítem flex antes de que se distribuya el espacio libre. Combinado con flex-grow y flex-shrink, permite un layout responsivo. */
+    
     display: block;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -199,5 +206,30 @@ footer p {
     color: #bbb;
 }
 
+/* === Media Queries para responsividad (Opcional pero recomendado para Flexbox) === */
+/* Si la pantalla es más pequeña que 768px, las imágenes se adaptan aún mejor */
+@media (max-width: 768px) {
+    .contenedor-imagenes img {
+        width: 100%; /* Las imágenes ocupan todo el ancho disponible en pantallas pequeñas */
+        flex-basis: auto; /* Permite que el navegador determine el tamaño base */
+    }
+}
 
-
+/* Si la pantalla es más pequeña que 480px, los títulos se ajustan */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    body {
+        padding: 10px;
+    }
+    main {
+        padding: 15px;
+    }
+}
